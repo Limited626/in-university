@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>201306601232湛淋清</title>
+</head>
+
+<body>
+<form id="f1" name="f1" method="post" action="">
+  <p>
+    <input type="text" name="t1" id="t1" />
+  </p>
+  <p>
+    <input type="button" name="submit"  value="提交" onclick="main()"/>
+  </p>
+</form>
+<script language="javascript">
+ function main()
+ {
+	var d=101;
+	var n=f1.t1.value;
+	var sum=0,p,q,r=n;
+	document.write("素数有：")
+	    for(n;n>0;n--)
+	  {
+	    p=pripes(d);              //调用函数求素数  
+		d=p;                      //赋值给a            
+		d++;                      //求素数         
+		document.write(p + " ");
+	  } 
+	    q=add(r);                 //调用函数求n个素数之和
+	    document.write("素数和为：" + q)	
+   }
+function add(q1)                  //求和
+{
+	var i=101,sum=0;
+	for(var q1;q1>0;q1--)
+	{
+	var y2=pripes(i);
+	i=y2;
+	i++;
+	sum+=y2;
+	}
+	return sum;
+}
+function pripes(t1)
+{                               //求n个大于100的素数
+  var x1,y1;
+    for(x1=t1;;x1++)
+     {
+        for(y1=2;y1<x1;y1++)
+	   {  
+          if(x1%y1 == 0)
+		  break; 	      
+	   }
+	     if(y1>=x1) return x1;
+		 
+	 }
+}
+
+</script>
+</body>
+</html>
