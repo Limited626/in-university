@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js-2</title>
+</head>
+
+<body>
+<script language="javascript">
+var l,m ,ten ,s;
+var n0=0,n1=1,n2=2,n3=3,n4=4,n5=5,n6=6,n7=7,n8=8,n9=9;
+for(ten=0;ten<10;ten++)
+   {
+     s=Math.round(Math.random()*900000+100000);
+	 document.write(s+"<br />") 
+	 if(s==100000){n1++;n0+=5;}
+	 if(s!=100000 || s!=1000000)
+	 {	
+	 s=s.toString();       //转换为字符串
+	 for(l=0;l<6;l++)
+	       {
+           m=s.charAt(l);  //返回第l个字符编码
+           m=parseInt(m);  //码转换为整型数字
+           switch(m)           
+		           {
+					       case 0: n0++; break;
+						   case 1: n1++; break;
+						   case 2: n2++; break;
+						   case 3: n3++; break;
+						   case 4: n4++; break;
+						   case 5: n5++; break;
+						   case 6: n6++; break;
+						   case 7: n7++; break;
+						   case 8: n8++; break;
+						   case 9: n9++; break;
+					}                         
+				}									 
+												 	 
+		 }    					     	
+		
+	}
+	document.write("0的个数为：" + n0 + "<br />");
+	document.write("1的个数为：" + n1 + "<br />");
+	document.write("2的个数为：" + n2 + "<br />");
+	document.write("3的个数为：" + n3 + "<br />");
+	document.write("4的个数为：" + n4 + "<br />");
+	document.write("5的个数为：" + n5 + "<br />");
+	document.write("6的个数为：" + n6 + "<br />");
+	document.write("7的个数为：" + n7 + "<br />");
+	document.write("8的个数为：" + n8 + "<br />");
+	document.write("9的个数为：" + n9 + "<br />");
+     document.write(suzu +'\br');
+   
+
+
+</script>
+</body>
+</html>
