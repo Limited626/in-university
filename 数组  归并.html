@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>zhanlq626@163.com</title>
+</head>
+ 
+<body>
+请输入十个数字，以空格隔开
+<form id="form1" name="form1" method="post" action="">
+  <p>
+    <input type="text" name="sss" id="sss" />
+  </p>
+  <p>
+    <input type="button" name="button" value="输入"  onclick="shuru2()"/>
+  </p>
+</form>
+<script language="javascript">
+var Sort1 = function(arr){                   //冒泡排序
+    for(var i=0;i<arr.length;i++){
+        for(var j=i;j<arr.length;j++){
+            if(arr[i]>arr[j]){
+                var temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    return arr;
+}
+/*------------------------------------划分线-------------------------------------------*/
+ 
+/*var Sort2 = function(arr) {                           //二分排序
+　　if (arr.length <= 1) { return arr; }
+　　var pivotIndex = Math.floor(arr.length / 2);       
+　　var pivot = arr.splice(pivotIndex, 1)[0];          //选取中点
+　　var left = [];
+　　var right = [];
+　　for (var i = 0; i < arr.length; i++){
+　　　　if (arr[i] < pivot) {           
+　　　　　　left.push(arr[i]);                       //小于放左边
+　　　　} else {
+　　　　　　right.push(arr[i]);                       //大于放右边
+　　　　}
+　　}
+　　return Sort2(left).concat([pivot], Sort2(right));            //重复
+}*/
+var suiji = function(sb){                   //随机产生1--100的十个数放入数组
+var b,m;
+var sz1=new Array([10]);
+for(b=  0;b<10;b++){
+   var a=Math.ceil(Math.random()*100);
+   sz1[b]=a;}
+   sz1=Sort1(sz1);  //排序
+  
+ 
+  return sz1;
+}
+ 
+/*------------------------------------划分线-------------------------------------------*/
+ 
+var shuru2=function(xb){                  //从表单输入十个数存入数组
+    var sz2=new Array([10]);
+    var n=form1.sss.value;
+    var zfc=n.split(" ");
+    for(var d=  0;d<10;d++){
+       sz2[d]=parseInt(zfc[d])
+    }
+    sz2=Sort1(sz2);            //排序
+    document.write(sz2+"<br>")
+    return sz2
+}
+ 
+/*------------------------------------划分线-------------------------------------------*/
+ 
+ function gb(a,b){             //归并函数
+    var x = 0;
+    var l = 0;
+    var add = [];
+    var al = a.length;
+    var bl = b.length;
+ 
+    for(var i = 0; i < bl; i++){
+        for(var j = x; j < al; j++){
+            if(b[i] < a[j]){
+                add.push(b[i]);    //如果想对小，就加入到新的add中
+                l = i;
+                break;
+            }else{                
+                add.push(a[j]);
+                x++;
+            }
+        }     
+    }            
+ 
+    if(x == a.length){
+        for(var y = l; y < bl; y++){
+            add.push(b[y]);
+        }
+    }else{
+        for(var z = x; z < al; z++){
+            add.push(a[z]);
+        }
+    }
+  return add;
+     
+}
+    document.write(suiji()+"<br>")
+     
+    document.write(gb(suiji(),shuru2()))
+ 
+ 
+ 
+/*------------------------------------划分线-------------------------------------------*/
+ 
+ 
+ 
+</script>
+</body>
+</html>
