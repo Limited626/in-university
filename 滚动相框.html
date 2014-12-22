@@ -1,0 +1,516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>校园生活集</title>
+<style type="text/css">
+div.anythingSlider {
+	width: 700px;
+	height: 390px;
+	margin: 0 auto;
+   }
+   /*------------------------图片区域----------------*/
+   @charset "utf-8";
+
+body{ background:#333;}
+
+/* image-slider */
+.image-slider{
+	width:1000px;height:350px;
+	margin:0 auto;padding:14px 16px 0px 16px;
+	position:relative;}
+
+.image-slider-back, .image-slider-forward{
+	float:left;width:40px;height:98px;
+	color:White;
+	position:relative;top:32px;cursor:pointer;}
+.spic{background-image:url(image/zoom.png)}
+	
+.image-slider-back{
+	background-image:url(image/left.png);
+	background-repeat:no-repeat;
+	background-position:left;}
+	
+.image-slider-forward{
+	background-image:url(image/right.png);
+	background-repeat:no-repeat;background-position:right;}
+	
+.image-slider-contents{
+	width:900px;height:264px;
+	float:left;position:relative;overflow:hidden;}
+
+.image-slider-contents .contents-wrapper{
+	position:absolute;padding-top:18px; left:0;}
+	
+.image-slider-contents .outer{
+	background-color:#fff;float:
+	left;width:256px;height:256px;margin:0px 15px;
+	cursor:pointer; position:relative;}
+/*---------------------------*/
+.spic{
+	width:156px;height:186px;
+	 text-align:center; color:#333; float:left;}
+	 
+.image-slider-contents img{
+	width:256px;height:220px; margin:0 auto;}
+	
+.spic a{ 
+    display:block; text-align:center;}
+
+.hidden{display:none;}
+
+.visible{display:block;}
+
+.thumbnail-active{
+	filter:alpha(opacity=100);
+	opacity:1.0;cursor:pointer;}
+	
+.thumbnail-inactive{
+	filter:alpha(opacity=20);
+	opacity:0.2;cursor:pointer;}
+/*---------------打开图片框区域----------------*/
+.preview{
+	position:absolute;width:600px;height:500px;
+	background-color:White;padding:2px;
+	border:solid 1px black;}
+	
+.preview .img-large{width:600px;z-index:1000; margin:0 auto;}
+
+.preview .img-large .right{
+	position:absolute;left:560px;top:200px;
+	z-index:1000;width:48px;height:48px;
+	background:url(image/right2.png);cursor:pointer;}
+	
+.preview .close{
+	position:absolute;left:570px;top:0px;
+	width:32px;height:34px;
+	background:url(image/close.png);float:right;
+	cursor:pointer;z-index:2000;}
+	
+.preview .img-large img{width:600px;height:500px;}
+
+.preview .label{
+	width:434px;line-height:30px;float:left;
+	position:absolute;top:400px; left:0;padding:8px;background-color:White;
+	text-align:left;font-weight:bold;font-size:13px; text-align:center;}
+.outer{border:solid 1px black;}
+
+   /*-----------------------------------------------*/
+a:link {
+ text-decoration: none;
+}
+a:visited {
+ text-decoration: none;
+}
+a:hover {
+ text-decoration: none;
+}
+a:active {
+ text-decoration: none;
+}
+#all{
+	height:1000px;
+	background:#F90;
+
+}
+#picture{
+	width:900px;
+	height:400px;
+	position:absolute;
+	left:200px;
+	top:300px;}
+#最底部{
+	position: absolute;
+	left: 0px;
+	top: 1000px;
+	width: 1440px;
+	height: 158px;
+	background-color: #00CCCC;
+}
+#ak{
+	background:#e0ffff;
+	width:1220px
+	height:100px;
+	margin-left:60px;
+	margin-right:auto;
+	position:absolute;
+	left:auto;
+	top:260px;
+}
+
+#akleft{
+	background:#9F6;
+	width:300px;
+	height:100px;
+	float:left;
+	margin:4px;
+	font-family:"华文隶书";
+	font-size:30px;
+}
+#ak1{
+	background:#CFC;
+	width:300px;
+	height:100px;
+	float:left;	
+    margin:4px;	
+	font-family:"华文隶书";
+	font-size:30px;
+	
+}
+#ak2{
+	background:#F9C;
+	width:300px;
+	height:100px;
+	float:left;	
+	margin:4px;
+	font-family:"华文隶书";
+	font-size:30px;
+}
+#ak3{
+	background:#C9F;
+	width:300px;
+	height:100px;
+	float:left;
+	margin:4px;	
+	font-family:"华文隶书";
+	font-size:30px;
+}
+#menu{
+	padding:30px;
+	float:right;	
+}
+#001{
+	position:relative;
+}
+#li{
+	display:block;
+	font-size:15px;
+	list-style:none;
+	font-weight:bold;
+	float:left;
+}
+#head1{
+	width:1220px;
+	height:180px;
+	font-family:"楷体";
+	font-size:58px;	
+	position:absolute;
+	left:auto;
+	top:80px;
+}
+/*---------------------顶部导航条-----------------------*/
+.绿色导航{
+	position:fixed;
+	left: 0px;
+	top: 0px;
+	background-color:#00CCCC;
+	width: 1440px;
+	height: 50px;
+	z-index:10;
+}
+.校园风光展{
+	position:fixed;
+	font-size: 14px;
+	color: #FFF;
+	left: 949px;
+	top: 20px;
+	width: 90px;
+	height: 22px;
+	z-index:10;
+}
+.校园生活{
+	position:fixed;
+	font-size: 14px;
+	color: #FFF;
+	left: 1070px;
+	top: 20px;
+	width: 90px;
+	height: 22px;
+	z-index:10;
+}
+.校园情感录{
+	position:fixed;
+	font-size: 14px;
+	color: #FFF;
+	left: 1190px;
+	top: 20px;
+	width: 90px;
+	height: 22px;
+	z-index:10;
+}
+.关于我们{
+	position:fixed;
+	font-size: 14px;
+	color: #FFF;
+	left: 1310px;
+	top: 20px;
+	width: 90px;
+	height: 22px;
+	z-index:10;
+}
+/*---------------------------------------------------------------------------*/
+
+
+</style>
+<script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="js/slider.js" type="text/javascript"></script> 
+<script type="text/javascript">
+$(document).ready(function() {
+	(function($) {
+    $.fn.extend({
+        slider: function(options) {
+            var settings = $.extend({
+                speed: 500
+
+            },
+            options);
+            return this.each(function() {
+                var slidercontents = $(this).addClass('image-slider-contents');
+                var slider = $('<div/>').addClass('image-slider').attr('id', slidercontents.attr('id'));
+                var backbutton = $('<div/>').addClass('image-slider-back');
+                var forwardbutton = $('<div/>').addClass('image-slider-forward');
+                slidercontents.removeAttr('id');
+                slidercontents.before(slider);
+                slider.append(backbutton);
+                slider.append(slidercontents);
+                slider.append(forwardbutton);
+                var total = $('> div', slidercontents).length;
+                var left = 0;
+                var w;
+                var width;
+                var maxScroll;
+                slider.append($('<div/>').css('display', 'none').addClass('preview').append($('<div/>').addClass('img-large')
+                .append($('<div/>').html('&nbsp').click(function(e) {
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    //display previous image
+                    var img = $(this).parent().find('img');
+                    var index = parseInt(img.attr('class'));
+                    img.removeAttr('class');
+                    if (index > 1) {
+                        index--;
+                        var src = $('.' + index + ' div img').attr('src');
+                        var txt = $('.' + index + ' div a').html();
+                        $('.preview').find('.label').html(txt);
+                        $('.preview').find('img').addClass('' + (index) + '').css('opacity', '0').attr('src', src).stop(false, true).animate({
+                            opacity: 1
+                        },
+                        1000);
+
+                    }
+                    else
+                    $('.preview').find('img').addClass('' + (index) + '');
+
+                }).addClass('left').css('opacity', '0.5').hover(function() {
+                    $(this).css('opacity', '1')
+                },
+                function() {
+                    $(this).css('opacity', '0.5')
+                }))
+                .append($('<div/>').html('&nbsp').click(function(e) {
+                    e.stopPropagation();
+                    e.stopImmediatePropagation();
+                    var img = $(this).parent().find('img');
+                    var index = parseInt(img.attr('class'));
+                    img.removeAttr('class');
+                    if (index < total) {
+                        index++;
+                        var src = $('.' + index + ' div img').attr('src');
+                        var txt = $('.' + index + ' div a').html();
+                        $('.preview').find('.label').html(txt);
+                        $('.preview').find('img').addClass('' + (index) + '').css('opacity', '0').attr('src', src).stop(false, true).animate({
+                            opacity: 1
+                        },
+                        1000);
+
+                    }
+                    else
+                    $('.preview').find('img').addClass('' + (index) + '')
+
+                }).addClass('right').css('opacity', '0.5').hover(function() {
+                    $(this).css('opacity', '1')
+                },
+                function() {
+                    $(this).css('opacity', '0.5')
+                }))
+                .append($('<img/>'))).append($('<div/>').addClass('label').css('opacity', '0.8'))
+                .append($('<div/>').addClass('close').click(function(e) {
+                    $(this).parent().fadeOut("slow");
+
+                })));
+                $(document).click(function(e) {
+                    if ($('.preview').css('display') == 'block')
+                    $('.preview').fadeOut("slow");
+
+                });
+                function initialize() {
+                    var tempElements = $('> div', slidercontents);
+                    var allElements = new Array();
+                    tempElements.each(function(index, el) {
+                        allElements.push($('<div/>').addClass('' + (index + 1) + '').addClass('outer').append(el));
+
+                    });
+
+                    allElements = $(allElements);
+                    $('> div', slidercontents).remove();
+                    var wrapper = $('<div/>').addClass('contents-wrapper');
+                    allElements.each(function(index, el) {
+
+                        wrapper.append($(el));
+
+                    });
+                    slidercontents.append(wrapper);
+                    var w = $('.outer:eq(0)', slidercontents).outerWidth() + parseFloat($('.outer:eq(0)', slidercontents).css('margin-left')) + parseFloat($('.outer:eq(0)', slidercontents).css('margin-right'));
+                    var width = (total + 1) * w;
+                    var maxScroll = width - $('.image-slider-contents').outerWidth();
+                    wrapper.css({
+                        width: width
+                    });
+                    $('> div > div', slidercontents).css('display', '');
+                    $('.outer', slidercontents).each(function(index) {
+                        $(this).prepend($('<img/>').attr('src', 'image/zoom.png').addClass('zoom')
+                        .css({
+                            cursor: 'pointer',
+                            'position': 'absolute',
+                            'float': 'right',
+                            right:-10,
+                            top: -12,
+                            width: 34,
+                            height: 32
+                        }));
+
+                    });
+                    $('.outer a').click(function(e) {
+                        e.stopPropagation();
+                        e.stopImmediatePropagation();
+
+
+                    });
+                    $('.outer').hover(function() {
+                        $(this).addClass('active');
+                    },
+                    function() {
+                        $(this).removeClass('active');
+                    }).click(
+                    function(e) {
+                        e.stopPropagation();
+                        e.stopImmediatePropagation();
+                        var cls = $(this).attr('class').split(' ')[0];
+                        var p = $(this).find('div');
+                        var img = p.find('img').attr('src');
+                        var preview = $('.preview');
+                        var l = $('.image-slider').width() / 2 - preview.outerWidth() / 2;
+                        var t = (p.offset().top - preview.height());
+                        t -= t / 2;
+                        preview.css({
+                            left: l,
+                            top: t
+                        });
+                        var text = p.find('a').html();
+                        preview.find('img').attr('src', img).addClass(cls);
+                        preview.find('.label').html(text);
+                        preview.fadeIn("slow");
+
+
+                    });
+
+                    forwardbutton.click(function() {
+                        left -= w;
+                        if (left + maxScroll >= 0) {
+                            $('.contents-wrapper').stop(false, true).animate({
+                                left: '-=' + w
+                            },
+                            settings.speed);
+
+                        }
+                        else
+                        left += w;
+
+                    });
+                    backbutton.click(function() {
+                        if (left < 0) {
+                            left += w;
+                            $('.contents-wrapper').stop(false, true).animate({
+                                left: '+=' + w
+                            },
+                            settings.speed);
+
+                        }
+
+                    });
+
+                }
+                initialize();
+
+                function getDimensions(value) {
+                    return value + 'px';
+
+                }
+
+
+            });
+
+        }
+
+    });
+
+})(jQuery);
+	$('#slider').slider({ speed: 500 });
+});            
+</script>
+</head>
+
+<body>
+<div class="绿色导航" align="center"></div>
+<div class="校园风光展" id="q" ><a href="http//:www.baidu.com">校园风光展</a></div>
+<span class="w1">|</span>
+<div class="校园生活" id="q"><a href="http//:www.baidu.com">校园生活集</a></div>
+<span class="w2">|</span>
+<div class="校园情感录" id="q"><a href="http//:www.baidu.com">校园情感录</a></div>
+<span class="w3">|</span>
+<div class="关于我们" id="q"><a href="http//:www.baidu.com">关于我们</a></div>
+<div id="all">
+<div id="head1" align="center">校园生活集</div>
+   <div id="ak" align="center">
+       <div id="akleft" align="center"><p>在寝室</p></div>
+       <a href="shj1.html"><div id="ak1" align="center"><p>在教室</p></div></a>
+       <a href="shj2.html"><div id="ak2" align="center"><p>最感动的那一刻</p></div></a>
+       <a href="shj3.html"><div id="ak3" align="center"><p>假装我们都毕业了</p></div></a>
+   </div>
+   <div id="menu">
+   </div>
+   	<div id="picture">
+	<div style="height:200px;"></div>
+
+		<div id="slider">
+		<div class="spic">
+			<img src="image/qs1.jpg" />
+			<a href="http://sc.chinaz.com">包抄手</a>
+		</div>
+		<div class="spic">
+			<img src="image/qs2.jpg" />
+			<a href="http://sc.chinaz.com">夕阳下的走廊</a>
+		</div>
+		<div class="spic">
+			<img src="image/qs3.jpg" />
+			<a href="http://sc.chinaz.com">开饭咯</a>
+		</div>
+		 <div class="spic">
+			<img src="image/qs4.jpg" />
+			<a href="http://sc.chinaz.com">兄弟来一杯</a>
+		</div>
+		<div class="spic">
+			<img src="image/qs5.jpg" />
+			<a href="http://sc.chinaz.com"></a>
+		</div>
+  
+	</div> </div>
+</div>
+<div id="最底部" align="center">
+  <p>Copyright © 2014-2050 Victor Zhan. All Rights Reserved.   </p>
+  <p> 长师北13 6-16qs 版权所有</p>
+  <p>zhanlq626@163.com</p>
+</div>
+<hr size="8px" color="#CC0000" />
+</body>
+</html>
